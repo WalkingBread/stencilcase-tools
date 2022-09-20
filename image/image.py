@@ -9,6 +9,7 @@ class Image:
         self.path = path
         if path != None:
             self.raw_image = PillowImage.open(path)
+            self.raw_image = self.raw_image.convert('RGBA')
         else:
             self.raw_image = PillowImage.new('RGBA', DEFAULT_IMAGE_SIZE, colors.BLANK)
         if size != None:

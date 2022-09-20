@@ -3,8 +3,7 @@ from image import Image
 from color import Color
 
 if __name__ == '__main__':
-    img = Image('samples/walter.jpg')
+    img = Image('../pig.png')
     layer = Layer(image=img)
-    layer = layer.limit_colors([Color((222, 122, 204, 255)), Color((108, 96, 171, 255)), Color((96, 66, 245, 255)), Color((26, 18, 66, 255))])
-    layer.save('samples/walter1.png')
-    layer = layer.get_edges()
+    layer = layer.extract_color(Color((0, 0, 0, 255)))
+    layer.save('samples/sea1.png')

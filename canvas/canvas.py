@@ -71,7 +71,7 @@ class Layer:
         self.layer_image.set_pixel_color(position, color)
 
     def extract_color(self, color):
-        new_img = Image(self.layer_image.get_size())
+        new_img = Image(size=self.layer_image.get_size())
         img = modify_pixels(self.layer_image, new_img, extract_color, {'color': color})
         return Layer(image=img)
 
