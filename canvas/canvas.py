@@ -28,7 +28,7 @@ def modify_pixels(image, new_image, operation, operation_args):
 
 def extract_color(image, new_image, position, operation_args):
     color = operation_args['color']
-    if image.get_pixel_color(position) == color:
+    if image.get_pixel_color(position).is_same(color):
         new_image.set_pixel_color(position, color)
 
 def remove_artifacts(image, new_image, position, operation_args):

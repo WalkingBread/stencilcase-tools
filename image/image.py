@@ -48,7 +48,7 @@ class Image:
         return Image(pillow_image=self.raw_image.convert('L'))
 
     def convert_to_rgb(self):
-        return Image(pillow_image=self.raw_image.convert('RGB'))
+        return Image(pillow_image=self.raw_image.convert('RGBA'))
 
     def invert_colors(self):
         return Image(pillow_image=ImageOps.invert(self.raw_image))

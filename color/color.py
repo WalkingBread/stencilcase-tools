@@ -12,6 +12,9 @@ class Color:
 
     def get_values(self):
         return(self.r, self.g, self.b, self.a)
+
+    def is_same(self, color):
+        return self.get_values() == color.get_values()
     
     def get_shade(self, value):
         r = self.r + value
